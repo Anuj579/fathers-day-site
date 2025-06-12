@@ -8,10 +8,9 @@ export default function FinalPage() {
   // Auto-trigger confetti when page loads
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Create a beautiful confetti effect
       const duration = 3000
       const animationEnd = Date.now() + duration
-      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 50 }
 
       function randomInRange(min, max) {
         return Math.random() * (max - min) + min
@@ -65,7 +64,7 @@ export default function FinalPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Main title */}
+
         <motion.h2
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl py-1.5 font-bold mb-6 sm:mb-8 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent px-4"
           initial={{ y: 30, opacity: 0 }}
@@ -75,16 +74,15 @@ export default function FinalPage() {
           Happy Father's Day!
         </motion.h2>
 
-        {/* Celebration emoji */}
         <motion.div
-          className="text-6xl sm:text-7xl mb-6 sm:mb-8"
+          className="text-5xl sm:text-6xl mb-6 sm:mb-8"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <motion.span
             animate={{
-              rotate: [0, 10, -10, 0],
+              rotate: [0, 5, -5, 0],
               scale: [1, 1.1, 1],
             }}
             transition={{
@@ -92,12 +90,12 @@ export default function FinalPage() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
+            className="inline-block"
           >
             🎉
           </motion.span>
         </motion.div>
 
-        {/* Subtitle */}
         <motion.p
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-light px-4 max-w-3xl mx-auto"
           initial={{ y: 15, opacity: 0 }}
@@ -107,7 +105,6 @@ export default function FinalPage() {
           You are the best dad in the world, and I'm so lucky to be your child
         </motion.p>
 
-        {/* Love message */}
         <motion.p
           className="text-lg sm:text-xl md:text-2xl text-pink-400 mb-8 font-semibold px-4"
           initial={{ y: 15, opacity: 0 }}
@@ -117,7 +114,6 @@ export default function FinalPage() {
           With all my love and gratitude ❤️
         </motion.p>
 
-        {/* Signature */}
         <motion.p
           className="text-base sm:text-lg md:text-xl text-purple-400 mb-8 font-medium px-4"
           initial={{ y: 15, opacity: 0 }}

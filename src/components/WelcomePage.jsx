@@ -7,7 +7,6 @@ export default function WelcomePage({ onStartMusic }) {
     return (
         <section className="min-h-screen flex items-center justify-center px-4 py-8">
             <div className="text-center max-w-4xl mx-auto w-full">
-                {/* Main dad emoji */}
                 <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -26,7 +25,7 @@ export default function WelcomePage({ onStartMusic }) {
                         }}
                         transition={{
                             duration: 4,
-                            repeat: Number.POSITIVE_INFINITY,
+                            repeat: Infinity,
                             ease: "easeInOut",
                         }}
                     >
@@ -34,7 +33,6 @@ export default function WelcomePage({ onStartMusic }) {
                     </motion.div>
                 </motion.div>
 
-                {/* Title */}
                 <motion.h1
                     className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent px-4"
                     initial={{ y: 30, opacity: 0 }}
@@ -44,7 +42,6 @@ export default function WelcomePage({ onStartMusic }) {
                     For the Best Dad
                 </motion.h1>
 
-                {/* Subtitle */}
                 <motion.p
                     className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-12 leading-relaxed font-light px-4 max-w-3xl mx-auto"
                     initial={{ y: 20, opacity: 0 }}
@@ -73,7 +70,6 @@ export default function WelcomePage({ onStartMusic }) {
                     <span className="relative z-10">Start the Journey</span>
                 </motion.button>
 
-                {/* Simple gift */}
                 <motion.div
                     className="mt-8 sm:mt-12 text-4xl sm:text-5xl"
                     initial={{ scale: 0, opacity: 0 }}

@@ -35,7 +35,6 @@ export default function PhotoGallery() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
-                {/* Title */}
                 <motion.h2
                     className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent px-4"
                     initial={{ y: 20, opacity: 0 }}
@@ -96,7 +95,6 @@ export default function PhotoGallery() {
                     </Swiper>
                 </motion.div>
 
-                {/* Simple decoration */}
                 <motion.div
                     className="text-3xl sm:text-4xl"
                     initial={{ scale: 0, opacity: 0 }}
@@ -104,14 +102,16 @@ export default function PhotoGallery() {
                     transition={{ delay: 1, duration: 0.5 }}
                 >
                     <motion.span
+                        initial={{ rotate: 0 }}
                         animate={{
                             rotate: [0, 5, -5, 0],
                         }}
                         transition={{
                             duration: 4,
-                            repeat: Number.POSITIVE_INFINITY,
+                            repeat: Infinity,
                             ease: "easeInOut",
                         }}
+                        className="inline-block"
                     >
                         📷
                     </motion.span>

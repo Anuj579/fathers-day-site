@@ -39,3 +39,14 @@ button{
 .swiper-pagination{
   display: none;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.6);
+  border-radius: 9999px;
+  border-radius: 4px;
+}

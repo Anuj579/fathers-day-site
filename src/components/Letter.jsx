@@ -98,7 +98,7 @@ export default function Letter() {
                         >
                             With all my love,
                             <br />
-                            <span className="text-pink-400">Your Child</span> ❤️
+                            <span className="text-pink-400">Your Child</span>❤️
                         </motion.p>
                     </div>
                 </motion.div>
