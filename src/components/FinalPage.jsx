@@ -99,7 +99,7 @@ export default function FinalPage() {
 
         {/* Subtitle */}
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 sm:mb-8 font-light px-4 max-w-3xl mx-auto"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-light px-4 max-w-3xl mx-auto"
           initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.6 }}
@@ -109,7 +109,7 @@ export default function FinalPage() {
 
         {/* Love message */}
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl text-pink-400 mb-8 sm:mb-12 font-semibold px-4"
+          className="text-lg sm:text-xl md:text-2xl text-pink-400 mb-8 font-semibold px-4"
           initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
@@ -119,7 +119,7 @@ export default function FinalPage() {
 
         {/* Signature */}
         <motion.p
-          className="text-base sm:text-lg md:text-xl text-purple-400 mb-8 sm:mb-12 font-medium px-4"
+          className="text-base sm:text-lg md:text-xl text-purple-400 mb-8 font-medium px-4"
           initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.6 }}

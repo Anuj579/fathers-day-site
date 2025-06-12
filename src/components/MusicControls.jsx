@@ -6,49 +6,21 @@ import { Volume2, VolumeX } from "lucide-react"
 
 export default function MusicControls() {
     const [isPlaying, setIsPlaying] = useState(true)
-    const [isMuted, setIsMuted] = useState(false)
     const audioRef = useRef(null)
 
     useEffect(() => {
-        // Create and start audio
-        audioRef.current = new Audio("/placeholder-audio.mp3")
-        audioRef.current.loop = true
-        audioRef.current.volume = 0.5
-        audioRef.current.play().catch(console.error)
-
-        return () => {
-            if (audioRef.current) {
+        if (audioRef.current) {
+            audioRef.current.volume = 0.5; // Adjust the song volume here
+            if (isPlaying) {
+                audioRef.current.play().catch(console.error)
+            } else {
                 audioRef.current.pause()
-                audioRef.current = null
             }
         }
-    }, [])
+    }, [isPlaying])
 
     const toggleMusic = () => {
-        if (audioRef.current) {
-            if (isPlaying) {
-                audioRef.current.pause()
-                setIsPlaying(false)
-            } else {
-                audioRef.current.play().catch(console.error)
-                setIsPlaying(true)
-            }
-        }
-    }
-
-    const toggleMute = () => {
-        if (audioRef.current) {
-            audioRef.current.muted = !isMuted
-            setIsMuted(!isMuted)
-        }
-    }
-
-    const handleClick = () => {
-        if (isMuted) {
-            toggleMute()
-        } else {
-            toggleMusic()
-        }
+        setIsPlaying(!isPlaying);
     }
 
     return (
@@ -59,22 +31,15 @@ export default function MusicControls() {
             transition={{ delay: 0.5, duration: 0.5 }}
         >
             <motion.button
-                onClick={handleClick}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white p-3 sm:p-4 rounded-full shadow-xl border border-white/10 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title={isMuted ? "Unmute" : isPlaying ? "Pause Music" : "Play Music"}
+                onClick={toggleMusic}
+                className="bg-white/5 hover:bg-white/10 backdrop-blur-xl text-white p-3 sm:p-4 rounded-full shadow-xl border border-white/10 transition-all duration-300"
+                title={isPlaying ? "Pause Music" : "Play Music"}
             >
-                <motion.div
-                    animate={isPlaying && !isMuted ? { rotate: 360 } : { rotate: 0 }}
-                    transition={{
-                        duration: 3,
-                        repeat: isPlaying && !isMuted ? Number.POSITIVE_INFINITY : 0,
-                        ease: "linear",
-                    }}
-                >
-                    {isMuted ? <VolumeX className="w-5 h-5 sm:w-6 sm:h-6" /> : <Volume2 className="w-5 h-5 sm:w-6 sm:h-6" />}
-                </motion.div>
+                {/* Change the audio src accordingly */}
+                <audio ref={audioRef} src="/bg.mp3" loop preload="auto" />
+                <div>
+                    {isPlaying ? <Volume2 className="w-5 h-5 sm:w-6 sm:h-6" /> : <VolumeX className="w-5 h-5 sm:w-6 sm:h-6" />}
+                </div>
             </motion.button>
         </motion.div>
     )

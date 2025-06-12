@@ -72,13 +72,13 @@ export default function HomePage() {
       {/* Subtle background effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-40 h-40 bg-pink-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-20 w-48 h-48 bg-purple-500/5 rounded-full blur-3xl delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-44 h-44 bg-blue-500/5 rounded-full blur-3xl delay-2000"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-36 h-36 bg-pink-400/5 rounded-full blur-3xl delay-500"></div>
+        <div className="absolute top-1/3 right-20 w-48 h-48 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-1/4 w-44 h-44 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-36 h-36 bg-pink-400/5 rounded-full blur-3xl"></div>
       </div>
 
       {/* Floating hearts */}
-      <div className="fixed inset-0 pointer-events-none">
+      <div className="fixed inset-0 pointer-events-none z-30">
         {hearts.map((heart, i) => (
           <motion.div
             key={i}

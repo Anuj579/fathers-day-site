@@ -9,7 +9,7 @@ export default function Navigation({ currentPage, totalPages, onNext, onPrev, on
     return (
         <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
             <motion.div
-                className="flex items-center gap-2 sm:gap-4 bg-gradient-to-br from-indigo-900/5 via-white/10 to-zinc-900/5 backdrop-blur-2xl rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/10 shadow-2xl"
+                className="flex items-center gap-2 sm:gap-4 bg-gradient-to-br from-indigo-900/5 via-white/10 to-zinc-900/5 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/10 shadow-2xl"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}

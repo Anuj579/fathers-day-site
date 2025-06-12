@@ -10,24 +10,20 @@ import "swiper/css/pagination"
 export default function PhotoGallery() {
     const photos = [
         {
-            src: "/1.png",
+            src: "/1.jpg",
             caption: "Our first adventure together",
         },
         {
-            src: "/1.png",
+            src: "/2.jpg",
             caption: "Teaching me to ride a bike",
         },
         {
-            src: "/1.png",
+            src: "/3.jpg",
             caption: "Family vacation memories",
         },
         {
-            src: "/1.png",
+            src: "/4.jpg",
             caption: "Graduation day pride",
-        },
-        {
-            src: "/1.png",
-            caption: "Just being silly together",
         },
     ]
 
