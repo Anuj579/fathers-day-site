@@ -72,7 +72,7 @@ export default function PhotoGallery() {
                             delay: 4000,
                             disableOnInteraction: false,
                         }}
-                        className="w-72 h-96 sm:w-80 sm:h-[26rem]"
+                        className="w-72 h-90 sm:w-80 sm:h-100"
                     >
                         {photos.map((photo, index) => (
                             <SwiperSlide key={index}>
@@ -85,7 +85,7 @@ export default function PhotoGallery() {
                                                 className="w-auto h-auto object-cover"
                                             />
                                         </div>
-                                        <div className="p-4 sm:p-6 text-center bg-gradient-to-t from-gray-900 to-transparent">
+                                        <div className="p-6 text-center">
                                             <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{photo.caption}</p>
                                         </div>
                                     </div>
